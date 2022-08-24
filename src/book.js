@@ -8,12 +8,19 @@ function buildMainCharacter(name, age, pronouns) {
     age: age,
     pronouns: pronouns,
   }
+  return character;
 }
+
+function saveReview(review, array) {
+  array.push(review)
+  return array;
+}
+
 
 module.exports = {
   createTitle,
   buildMainCharacter,
-  // saveReview,
+  saveReview,
   // calculatePageCount,
   // writeBook,
   // editBook
