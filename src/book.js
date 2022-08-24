@@ -12,8 +12,11 @@ function buildMainCharacter(name, age, pronouns) {
 }
 
 function saveReview(review, array) {
-  array.push(review)
-  return array;
+  if (!array.includes(review)) {
+    array.push(review);
+  } else {
+    return array;
+  }
 }
 
 
