@@ -14,15 +14,27 @@ function unshelfBook(book, shelf) {
 
 function listTitles(shelf) {
   var newTitles = [];
-  for (var i = 0; i < shelf.length; i++) {
-    newTitles.push(shelf[i].title);
-  }
-  return newTitles.join(", ");
+    for (var i = 0; i < shelf.length; i++) {
+      newTitles.push(shelf[i].title);
+    }
+    return newTitles.join(", ");
+}
+
+function searchShelf(shelf, book) {
+  var includesBook = false;
+    for (var i = 0; i < shelf.length; i++) {
+      if (shelf[i].title.includes(book)) {
+        includesBook = true;
+      } else {
+        includesBook = false;
+      }
+    }
+  return includesBook;
 }
 
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
