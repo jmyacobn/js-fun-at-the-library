@@ -12,9 +12,17 @@ function unshelfBook(book, shelf) {
   }
 }
 
+function listTitles(shelf) {
+  var newTitles = [];
+  for (var i = 0; i < shelf.length; i++) {
+    newTitles.push(shelf[i].title);
+  }
+  return newTitles.join(", ");
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
-  // listTitles,
+  listTitles,
   // searchShelf
 };
