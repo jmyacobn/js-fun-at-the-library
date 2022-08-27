@@ -11,11 +11,11 @@ function buildMainCharacter(name, age, pronouns) {
   return character;
 }
 
-function saveReview(review, array) {
-  if (!array.includes(review)) {
-    array.push(review);
+function saveReview(feedback, reviews) {
+  if (!reviews.includes(feedback)) {
+    reviews.push(feedback);
   } else {
-    return array;
+    return reviews;
   }
 }
 
